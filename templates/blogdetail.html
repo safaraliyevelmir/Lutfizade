@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock css %}
+{% block menu %}
+<li>
+    <a href="{% url 'main' %}#home">Home</a>
+</li>
+<li>
+    <a href="{% url 'main' %}#about">About</a>
+</li>
+<li>
+    <a href="{% url 'main' %}#blog">Blog</a>
+</li>
+<li>
+    <a href="{% url 'main' %}#idea">Idea</a>
+</li>
+{% endblock menu %}
+{% block menumobile %}
+<li>
+    <a href="{% url 'main' %}#home">Home</a>
+</li>
+<li>
+    <a href="{% url 'main' %}#about">About</a>
+</li>
+<li>
+    <a href="{% url 'main' %}#blog">Blog</a>
+</li>
+<li>
+    <a href="{% url 'main' %}#idea">Idea</a>
+</li>
+{% endblock menumobile %}
+{% block content %}
+
+<main>
+    <div class="blog-header">
+        <h1>Blog</h1>
+    </div>
+    <div class="blog-detail">
+        <div class="img">
+            <img src="{{blog.image.url}}" alt="">
+            <h1>{{blog.title}}</h1>
+            <b><p style="margin: 1rem 0;">{{blog.date}}</p></b>
+            <p>{{blog.content | safe}}</p>
+        </div>
+    </div>
+</main>
+{% endblock content %}

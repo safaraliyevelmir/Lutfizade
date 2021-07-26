@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block menu %}
+<li>
+    <a href="#home">Home</a>
+</li>
+<li>
+    <a href="#about">About</a>
+</li>
+<li>
+    <a href="#blog">Blog</a>
+</li>
+<li>
+    <a href="#idea">Idea</a>
+</li>
+{% endblock menu %}
+{% block menumobile %}
+<li>
+    <a href="#home">Home</a>
+</li>
+<li>
+    <a href="#about">About</a>
+</li>
+<li>
+    <a href="#blog">Blog</a>
+</li>
+<li>
+    <a href="#idea">Idea</a>
+</li>
+{% endblock menumobile %}
+{% block content %}
+<main>
+    <div class="starter" id="home">
+        <div class="content">
+            <div class="text">
+                <h1>
+                    Lorem ipsum dolor sit
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fuga animi earum similique
+                    dicta esse dignissimos a nesciunt iusto maiores?
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="aboutme" id="about">
+        <div class="content">
+            <div class="info-box">
+                <div class="header">
+                    <p>ABOUT Lutfizade</p>
+                    <h1>{{aboutme.title}}</h1>
+                </div>
+                <div class="info">
+                    <p>
+                        {{aboutme.detail}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if ideas %}
+    <div class="idea" id="idea">
+        <div class="content">
+            <div class="header">
+                <h1>Ideas</h1>
+            </div>
+            <div class="idea-container">
+                
+                
+                
+                {% for idea in ideas %}
+                <div class="idea-box">
+                    <div class="header-box">
+                        <div class="header_idea">
+                           {{idea.title}}
+                        </div>
+                        <div class="email">
+                            {{idea.email}}
+                        </div>
+                    </div>
+                    <div class="date">
+                        {{idea.date}}
+                    </div>
+                    <div class="information">
+                        {{idea.content}}
+                    </div>
+                </div>
+                {% endfor %}
+
+               
+                    
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <div class="blogs" id="blog">
+        <div class="header">
+            <h1>Blog</h1>
+        </div>
+        <div class="blog-container">
+            {% for blog in blogs %}
+            <div class="blog">
+                <a href="/blogs/{{blog.id}}"><img src="{{blog.image.url}}" alt=""></a>
+                <div class="info">
+                    <h4><a style="text-decoration: none; color:black;" href="/blogs/{{blog.id}}">{{blog.title}}</a></h4>
+                   
+                    <div class="date">
+                        {{blog.date | date:"d"}}  {{blog.date | date:"M"}}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="load-more">
+            <button><a href="{% url 'blog' %}">Load More</a></button>
+        </div>
+    </div>
+
+    <div class="send-idea">
+        <div class="header">
+            <h1>Send Idea</h1>
+        </div>
+        <div class="form">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-group name">
+                    <label for="">Your Name:</label>
+                    {{form.fullname}}
+                </div>
+                
+                <div class="form-group name">
+                    <label for="">Your Email:</label>
+                    {{form.email}}
+                </div>
+
+                <div class="form-group name">
+                    <label for="">Your Idea title:</label>
+                    {{form.title}}
+                </div>
+
+                <div class="form-group name">
+                    <label for="">Your Idea:</label>
+                    {{form.content}}
+                </div>
+                <button type="submit">Send</button>
+
+            </form>
+        </div>
+    </div>
+
+</main>  
+{% endblock content %}
+
+
