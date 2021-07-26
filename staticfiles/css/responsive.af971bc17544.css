@@ -1,0 +1,114 @@
+@media only screen and (max-width: 1000px){
+    .menu{
+        display: none;
+    }
+    .menu-mobile{
+        display: flex !important;
+    }
+    .blogs .blog-container .blog .date{
+        top: 63% !important;
+
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+    .aboutme .info-box {
+        margin: 3rem 10% 3rem 10%;
+    }
+
+    .blogs .blog-container .blog{
+        width: 80%;
+    }
+
+    .blog-container{
+        flex-direction: column !important;
+        align-items: center;
+    }
+    .blog-box{
+        width: 600px;
+    }
+
+    .blog-box .date{
+        top: 60% !important;
+        font-size: 1.2rem !important;
+    }
+    .blogs .blog-container .blog .date{
+        top: 40%;
+
+    }
+}
+
+
+@media only screen and (max-width: 700px){
+    .idea .content .idea-box .email {
+        float: none;
+        display: block;
+    
+    }
+    .blogs-container .blog-box .detail h1{
+        font-size: 1rem !important;
+    }
+    .blog-container{
+        flex-direction: column;
+    }
+    .blogs .blog-container .blog .date {
+        top: 75%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .blogs .blog-container .blog .date {
+        top: 69%;
+    }
+    form{
+        width: 400px;
+    }
+    .blog-box{
+        width: 400px;
+    }
+    .blog-box .date{
+        top: 40% !important;
+    }
+    main .starter .content h1{
+        font-size: 2rem;
+    }
+    main .starter .content p{
+        font-size: 1rem;
+    }
+    .aboutme .info-box {
+        margin: 0;
+    }
+    
+}
+@media only screen and (max-width: 500px){
+    form{
+        width: 300px;
+    }
+    .blogs .blog-container .blog .date {
+        top: 60%;
+    }
+}
+@media only screen and (max-width: 400px){
+    .blogs .blog-container .blog .date {
+        top: 50%;
+    }
+    form{
+        width: 250px;
+    }
+    .blog-box{
+        width: 300px;
+    }
+    .blog-box .date{
+        top: 40% !important;
+        font-size: .7rem !important;
+    }
+    .aboutme .header h1 {
+        font-size: 1rem;
+    }
+
+    .aboutme .info p {
+        font-size: 10px;
+    
+    }
+}
