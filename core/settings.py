@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'idea',
     'blog',
     'lutfizade',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -105,6 +106,43 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+AWS_ACCESS_KEY_ID = "AKIAQQ2QSXFMCFTVIHMR"
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = "lutfizadehbucket"
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+
+
+
+
+'''
+[
+    {
+        "AllowedHeaders": [
+            "*"
+        ],
+        "AllowedMethods": [
+            "PUT",
+            "POST",
+            "DELETE"
+        ],
+        "AllowedOrigins": [
+            "http://www.example.com"
+        ],
+        "ExposeHeaders": [
+            "x-amz-server-side-encryption",
+            "x-amz-request-id",
+            "x-amz-id-2"
+        ],
+        "MaxAgeSeconds": 3000
+    }
+]
+'''
+
 
 
 # Internationalization
