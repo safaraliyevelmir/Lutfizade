@@ -167,7 +167,7 @@ main .starter .content p {
 }
 
 .aboutme {
-    background-image: url(../img/section-bg.jpg.webp);
+    background-image: url("../img/section-bg.jpg.0b601bb68661.webp");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
