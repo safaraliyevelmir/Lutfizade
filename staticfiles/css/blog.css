@@ -9,7 +9,7 @@
     font-weight: 400;
     padding: 100px 60px;
     margin: 0;
-    background-color: #5AFF80;
+    background-color: #8DA1AF;
 }
 
 .blogs-container{
@@ -27,7 +27,7 @@
 }
 
 .blogs-container .blog-box .date{
-    background-color: #5AFF80;
+    background-color: #8DA1AF;
     display: inline-block;
     padding: 20px;
     border-radius: 10px;

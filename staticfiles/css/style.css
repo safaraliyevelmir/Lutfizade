@@ -74,7 +74,7 @@ html {
     height: 20px;
     padding: 20px;
     z-index: 10000;
-    border: 1px solid #01FF56;
+    border: 1px solid #8DA1AF;
     font-size: 1rem;
     background-color: white;
     border-radius: 50%;
@@ -99,7 +99,7 @@ html {
 
 header {
     border-bottom: 1px solid black;
-    background-color: #5AFF80;
+    background-color: #8DA1AF;
 }
 
 header .brand,
@@ -162,7 +162,7 @@ main .starter .content p {
 }
 
 .starter {
-    background-color: #5AFF80;
+    background-color: #8DA1AF;
     font-family: 'Shippori Mincho', serif;
 }
 
@@ -261,7 +261,7 @@ p {
 
 
 .blogs {
-    background-color: #5AFF80;
+    background-color: #8DA1AF;
     padding: 1rem 0;
 }
 
@@ -336,14 +336,14 @@ p {
 }
 
 .blogs .load-more button:hover {
-    background-color: #5AFF80;
+    background-color: #8DA1AF;
     border: 1px solid #150303;
     transition: .5s;
 }
 
 .blogs .blog-container .blog .date {
     padding: 15px 10px 15px 10px;
-    background-color: #01FF56;
+    background-color: #8DA1AF;
     display: inline-block;
     border-radius: 10px;
     position: absolute;
@@ -411,7 +411,7 @@ form button {
     outline: none;
     font-size: 1.4rem;
     border: none;
-    background: #43ab23;
+    background: #8DA1AF;
     color: white;
     cursor: pointer;
 }
